@@ -1,0 +1,14 @@
+{
+  "name": "bamboo-buildlight",
+  "version": "1.0.0",
+  "description": "A Delcom build light app that works against Bamboo Rest API on Raspberry Pi",
+  "dependencies": {
+    "delcom-indicator": "^1.0.4"
+  },
+  "engines": {
+      "node": "v0.10.x"
+  },
+  "author": "Jessie Wei",
+  "license": "MIT",
+  "keywords": ["delcom", "buildlight","bamboo"]
+}

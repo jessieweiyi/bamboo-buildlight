@@ -1,0 +1,15 @@
+{
+    "baseUrl": "http://myhost:8085",
+    "username": "",
+    "passworld": "",
+    "configurations": [
+        {
+            "planKey": "PROJECTKEY-PLANKEY-1"
+        },
+        {
+            "planKey": "PROJECTKEY-PLANKEY-2",
+            "Successful": "green",
+            "Failed": "blue"
+        }
+    ]
+}

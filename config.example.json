@@ -2,14 +2,14 @@
     "baseUrl": "http://myhost:8085",
     "username": "",
     "passworld": "",
+    "pollInterval": 10000,
+    "displayDelay": 5000,
     "configurations": [
         {
             "planKey": "PROJECTKEY-PLANKEY-1"
         },
         {
-            "planKey": "PROJECTKEY-PLANKEY-2",
-            "Successful": "green",
-            "Failed": "blue"
+            "planKey": "PROJECTKEY-PLANKEY-2"
         }
     ]
 }

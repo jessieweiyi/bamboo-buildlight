@@ -48,13 +48,13 @@ MonitoredPlanCollection.prototype.displayStatus = function(light){
           light.turnOff();
           light.flashGreen();
       }
-  } else if (statusToDisplay === buildStatus.status.FAILURE && this.lastStatus !== status.FAILURE){
+  } else if (statusToDisplay === status.FAILURE && this.lastStatus !== status.FAILURE){
       this.lastStatus = status.FAILURE;
       if (light !== undefined) {
           light.turnOff();
           light.solidBlue();
       }
-  } else if (statusToDisplay === buildStatus.status.SUCCESS && this.lastStatus !== status.SUCCESS){
+  } else if (statusToDisplay === status.SUCCESS && this.lastStatus !== status.SUCCESS){
       this.lastStatus = status.SUCCESS;
       if (light !== undefined) {
           light.turnOff();

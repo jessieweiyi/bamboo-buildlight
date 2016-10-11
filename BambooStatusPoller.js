@@ -8,12 +8,22 @@ function BambooStatusPoller(baseUrl, username, password){
 BambooStatusPoller.prototype.poll = function(plan) {
   var resultAPI = this.baseUrl + "/rest/api/latest/result/" + plan.planKey + "/latest";
   var resultHandler = function(error, response, body){
-    plan.updateStatus(body);
+    if (!error && response.statusCode == 200){
+      plan.updateStatus(JSON.parse(body));
+    } else {
+      console.log("Error on " + plan.planKey + " status " + response.statusCode + " " + error);
+    }
   }
-  request.get(resultAPI, {
-            "Authorization" : auth
-        },
-        resultHandler);
+
+  var options = {
+    url: resultAPI,
+    headers: {
+      'Authorization': this.auth,
+      'Accept': 'application/json'
+    }
+  };
+
+  request(options, resultHandler);
 };
 
 module.exports = BambooStatusPoller;

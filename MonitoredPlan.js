@@ -16,6 +16,8 @@ MonitoredPlan.prototype.updateStatus = function(result) {
         this.lastStatus = status.FAILURE;
     }
 
+    console.log("Last Status: " + this.lastStatus);
+
     return this.lastStatus;
 }
 

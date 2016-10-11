@@ -1,4 +1,4 @@
-var BambooBuildLight = require('./BambooBuildLight')
+var BambooBuildLight = require('./BambooBuildlight')
 var config = require('./config.json');
 
 var bambooBuildLight = new BambooBuildLight(config);

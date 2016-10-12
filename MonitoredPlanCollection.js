@@ -46,13 +46,13 @@ MonitoredPlanCollection.prototype.displayStatus = function(light){
       this.lastStatus = status.BUILDING;
       if (light !== undefined) {
           light.turnOff();
-          light.solidYellow();
+          light.solidBlue();
       }
   } else if (statusToDisplay === status.FAILURE && this.lastStatus !== status.FAILURE){
       this.lastStatus = status.FAILURE;
       if (light !== undefined) {
           light.turnOff();
-          light.solidBlue();
+          light.solidRed();
       }
   } else if (statusToDisplay === status.SUCCESS && this.lastStatus !== status.SUCCESS){
       this.lastStatus = status.SUCCESS;

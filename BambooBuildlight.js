@@ -1,8 +1,6 @@
 var MonitoredPlanCollection = require('./MonitoredPlanCollection');
 var BambooStatusPoller = require('./BambooStatusPoller');
-var DelcomIndicator = function(){
-    return require('delcom-indicator');
-}
+var DelcomIndicator = require('delcom-indicator');
 
 function BambooBuildLight(config){
   this.pollInterval = config.pollInterval || 10 * 1000;

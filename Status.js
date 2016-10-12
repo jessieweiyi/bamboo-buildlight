@@ -1,5 +1,6 @@
 module.exports = {
-  UNKNOWN: 1,
   SUCCESS: 0,
-  FAILURE: -1
+  FAILURE: -1,
+  BUILDING: 1,
+  UNKNOWN: 2
 }

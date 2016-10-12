@@ -46,7 +46,7 @@ MonitoredPlanCollection.prototype.displayStatus = function(light){
       this.lastStatus = status.BUILDING;
       if (light !== undefined) {
           light.turnOff();
-          light.flashGreen();
+          light.solidYellow();
       }
   } else if (statusToDisplay === status.FAILURE && this.lastStatus !== status.FAILURE){
       this.lastStatus = status.FAILURE;

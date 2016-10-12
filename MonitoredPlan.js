@@ -10,6 +10,8 @@ MonitoredPlan.prototype.updateStatus = function(result) {
 
     if (!result){
         this.lastStatus = status.UNKNOWN;
+    } else if(!result.finished){
+      this.lastStatus == status.BUILDING;
     } else if (result.state === 'Successful'){
         this.lastStatus = status.SUCCESS;
     } else if (result.state === 'Failed'){

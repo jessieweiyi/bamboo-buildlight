@@ -23,7 +23,12 @@ BambooStatusPoller.prototype.poll = function(plan) {
     }
   };
 
-  request(options, resultHandler);
+  try{
+    request(options, resultHandler);
+  }
+  catch(err){
+    console.log(err);
+  }
 };
 
 module.exports = BambooStatusPoller;

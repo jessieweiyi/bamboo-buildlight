@@ -17,14 +17,19 @@ BambooBuildLight.prototype.start = function(){
   setInterval(function(){
     self.monitoredPlans.updateStatus(self.statusPoller);
     setInterval(function(){
-      self.monitoredPlans.displayStatus(self.delcomIndicator);
+      try{
+        self.monitoredPlans.displayStatus(self.delcomIndicator);
+      }catch(err){
+        console.log(err);
+      }
     }, self.displayDelay);
   }, self.pollInterval);
 };
 
 BambooBuildLight.prototype.dispose = function(){
   if (this.delcomIndicator !== undefined){
-      this.delcomIndicator.close();
+    this.delcomIndicator.turnOff();
+    this.delcomIndicator.close();
   }
 }
 

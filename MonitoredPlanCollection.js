@@ -12,8 +12,12 @@ function MonitoredPlanCollection(configs){
 
 MonitoredPlanCollection.prototype.updateStatus = function(statusPoller) {
   async.each(this.monitoredPlans, (plan, callback) => {
-    statusPoller.poll(plan);
-    callback();
+    try{
+      statusPoller.poll(plan);
+      callback();
+    }catch(err){
+      console.log(err);
+    }
   });
 };
 

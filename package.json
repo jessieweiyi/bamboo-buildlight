@@ -4,7 +4,13 @@
   "description": "A Delcom build light app that works against Bamboo Rest API on Raspberry Pi",
   "dependencies": {
     "delcom-indicator": "^1.0.4",
+    "forever": "^0.15.3",
     "request": "^2.75.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "start:daemon": "forever  -o buildlight.out.log -e buildlight.err.log start app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
     "node": "6.2.2"
